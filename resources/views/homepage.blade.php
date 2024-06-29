@@ -11,27 +11,18 @@
     <section class="container">
         <h1 class="text-center text-danger">LARAVEL COMICS HOMEPAGE</h1>
 
-        {{-- STAMPA DELL'ARRAY CHE HO CREATO IN STORE --}}
-        {{-- <pre>{{ print_r($filmList, true) }}</pre> --}}
-        <div class="row justify-content-between">
-            @foreach ($filmList as $film)
-            
-                <div class="card mb-3 p-0" style="width: 18rem;">
-                    <img src="{{ $film['thumb'] }}" class="card-img-top" style="height: 23rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Titolo: {{ $film['title'] }}</h5>
-                        <p class="card-text overflow-auto" style="height: 23rem;">Descrizione: {{ $film['description'] }}</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Prezzo: {{ $film['price'] }}</li>
-                        <li class="list-group-item">Serie: {{ $film['series'] }}</li>
-                        <li class="list-group-item">Data di vendita: {{ $film['sale_date'] }}</li>
-                        <li class="list-group-item">Genere: {{ $film['type'] }}</li>
-                    </ul>
-                </div>
-
-            @endforeach
-        </div>
+        <ul>
+            <li><a href="/comicBooks">ComicBooks</a>
+                <ul>
+                    @foreach ($booksList as $book)
+                        <li>{{ $book['title'] }}</li>
+                    @endforeach
+                </ul>
+            </li>
+            <li><a href="#">Films</a></li>
+            <li><a href="#">Cartoons</a></li>
+        </ul>
+        
         
 
     </section>
