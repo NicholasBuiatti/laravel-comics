@@ -17,7 +17,7 @@ Route::get('/', function () {
     //CREO UNA VARIABILE DATA IN CUI SALVARCI I DATI CHE SONO NELLA CARTELLA CONFIG IN STORE
     $data = config("store");
     //IMPORTO LO STORE NELLA ROTTA TRAMITE LA VARIABILE
-    return view('homepage', $data);
+    return view('homepage',  $data);
 });
 //CREO UNA ROTTA
 Route::get('/home', function () {
