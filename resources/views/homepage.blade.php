@@ -10,6 +10,11 @@
 <body class="bg-dark text-white">
     <section class="container">
         <h1 class="text-center text-danger">LARAVEL COMICS HOMEPAGE</h1>
+        <ul class="text-primary">
+            <li>{{$primo}}</li>
+            <li>{{$secondo}}</li>
+            <li>{{$terzo}}</li>
+        </ul>
     </section>
 </body>
 </html>
