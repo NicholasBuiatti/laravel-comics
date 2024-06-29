@@ -9,7 +9,11 @@
 </head>
 <body class="bg-dark text-white">
     <section class="container">
-        <h1 class="text-center text-danger">LARAVEL COMICS HOMEPAGE</h1>
+        @include('partials.header')
+    </section>
+    
+    <section class="container">
+        <h1 class="text-center text-danger">LARAVEL COMICS</h1>
 
         {{-- STAMPA DELL'ARRAY CHE HO CREATO IN STORE --}}
         {{-- <pre>{{ print_r($booksList, true) }}</pre> --}}
@@ -32,8 +36,11 @@
 
             @endforeach
         </div>
-        
-
     </section>
+
+    <section class="container">
+        @include('partials.footer')
+    </section>
+    
 </body>
 </html>

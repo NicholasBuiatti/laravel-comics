@@ -8,8 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body class="bg-dark text-white">
+
     <section class="container">
-        <h1 class="text-center text-danger">LARAVEL COMICS HOMEPAGE</h1>
+        @include('partials.header')
+    </section>
+
+    <section class="container">
 
         <ul>
             <li><a href="/comicBooks">ComicBooks</a>
@@ -23,8 +27,11 @@
             <li><a href="#">Cartoons</a></li>
         </ul>
         
-        
-
     </section>
+
+    <section class="container">
+        @include('partials.footer')
+    </section>
+    
 </body>
 </html>
