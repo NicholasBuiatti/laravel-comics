@@ -36,3 +36,24 @@ Route::get('/comicBooks', function () {
     //IMPORTO LO STORE NELLA ROTTA TRAMITE LA VARIABILE
     return view('comicBook', $data);
 })->name('COMIC BOOKS'); //DO UN NOME ALLA ROTTA COSI DA POTERLA RICHIAMARE CON QUESTA PAROLA
+
+Route::get('/comicBooks/{id}', function ($id) {
+
+    $comics = config("store.booksList"); // .fumetti ???
+    //CONTROLLO CHE L'ID SIA TRA 0 E 11
+    if ($id >= 0 && $id < count($comics)) {
+        //SE C'è LO MANDO NEL DATA CHE CONTIENE IL FUMETTO SOTTO COMIC
+        $data = [
+            "comic" => $comics[$id]
+        ];
+    } else {
+        // ALTRIMENTI LO MANDO NEL DATA CHE CONTIENE LA VOCE ERRORE CHE CONTIENE UNA STRINGA
+        $data = [
+            'errore' => '404 fumetto non trovato'
+        ];
+    };
+
+
+
+    return view('detailsBook', $data);
+})->name('Book details');
