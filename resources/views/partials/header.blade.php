@@ -5,9 +5,14 @@
     </div>
 
     <nav class="col-4 text-end">
-        <a href="/">HOME</a>
-        <a href="/comicBooks">COMIC BOOKS</a>
-        <a href="#">FILMS</a>
-        <a href="#">CARTOONS</a>
+        {{-- METTO LA CLASSE TESTO ROSSO SOLO QUANDO SONO SULLA PAGINA CHE HA IL NOME ROTTA UGUALE AL NOME ROTTA ATTUALE --}}
+        <a href="{{ route('Home') }}" class="{{ Route::currentRouteName() == 'Home' ? 'text-danger' : '' }} me-3">HOME</a>
+        <a href="/comicBooks" class="{{ Route::currentRouteName() == 'COMIC BOOKS' ? 'text-danger' : '' }} me-3">COMIC
+            BOOKS</a>
+        <a href="#" class="me-3">FILMS</a>
+        <a href="#" class="me-3">CARTOONS</a>
     </nav>
+    {{-- <div>
+        <p>{{ Route::currentRouteName() }}</p>
+    </div> --}}
 </header>
